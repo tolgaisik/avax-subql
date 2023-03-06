@@ -1,0 +1,38 @@
+type Transfer @entity {
+  id: ID!
+  address: String
+  data: String
+  blockNumber: Int!
+  transactionHash: String
+  transactionIndex: Int
+  blockHash: String!
+  logIndex: Int!
+  removed: Boolean
+}
+
+type OwnerOf @entity {
+  id: ID!
+  owner: String!
+}
+
+type TokenSaleConfigEvent @entity {
+        id: ID!
+        tierId: Int
+        name: String
+        price: String
+        count: Int
+        saleEnabled: Boolean
+        startDate: String
+        endDate: String
+        state: String
+}
+
+type TokenSale @entity {
+        id: ID!
+        tierId: Int
+        nftAmountPurchased: Int
+        paymentAmount: Int
+        tokenId: Int
+        reamingAmount: Int
+        seller: String
+}

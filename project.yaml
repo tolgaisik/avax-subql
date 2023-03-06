@@ -1,0 +1,51 @@
+specVersion: "1.0.0"
+
+name: "land-sale-subql"
+version: "0.0.1"
+runner:
+    node:
+        name: "@subql/node-avalanche"
+        version: "*"
+    query:
+        name: "@subql/query"
+        version: "*"
+description: "Subquery indexing project for Land Sale Contracts"
+repository: "https://github.com/heroesofnft/land-sale-subql"
+
+schema:
+    file: "./schema.graphql"
+
+network:
+    chainId: "fuji"
+    subnet: "2KV1ighhTjNpuQq8BVgHeJF3QHdF3KxhY9AqB9M1GfUuBCKjNo"
+    endpoint: "https://testnet.heroesofnft.com"
+    # Optionally provide the HTTP endpoint of a full chain dictionary to speed up processing
+    #dictionary: https://api.subquery.network/sq/subquery/avalanche-dictionary
+dataSources:
+  - kind: avalanche/Runtime
+    startBlock: 29900 # around the deployment of LandToken in Hero Testnet
+    assets:
+      LandToken:
+        file: "./abis/LandToken.json"
+    options:
+      abi: LandToken
+      address: "0x39CcF06229eCD78AAb8b42c2ecD3d43A8D6cD925"
+    mapping:
+      file: "./dist/index.js"
+      handlers:
+        - handler: handleTransfer
+          kind: avalanche/LogHandler
+          filter:
+            topics:
+              - Transfer(address indexed from, address indexed to, uint256 indexed tokenId)
+              - null
+        - handler: handleTokenSaleProgram
+          kind: avalanche/LogHandler
+          filter:
+            topics:
+              - TokenSaleConfigEvent(uint256 tierId,string name,uint256 price,uint256 count,bool saleEnabled,uint64 startDate,uint64 endDate,uint256[2] tokenIdRange,uint8 state)
+        - handler: handleTokenSale
+          kind: avalanche/LogHandler
+          filter:
+            topics:
+              - TokenSaleEvent(uint indexed tierId, uint256 nftAmountPurchased, uint256 paymentAmount, uint256 indexed tokenId, uint reamingAmount, address indexed seller)

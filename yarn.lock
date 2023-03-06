@@ -1351,16 +1351,16 @@
   resolved "https://registry.npmjs.org/@scure/base/-/base-1.1.1.tgz"
   integrity sha512-ZxOhsSyxYwLJj3pLZCefNitxsj093tb2vq90mp2txoYeBqbcjDjqFhyM8eUjq/uFm6zJ+mUuqxlS2FkuSY1MTA==
 
-"@subql/cli@^1.11.0":
-  version "1.11.0"
-  resolved "https://registry.npmjs.org/@subql/cli/-/cli-1.11.0.tgz"
-  integrity sha512-NiHFkbIY8miD22DNkl6D4jLwVLM6mmKY0SZ6g8yBuKq5BefCMiniCxoTWrgoCOVg8W2wAoo8kc9FguEESlP1Qg==
+"@subql/cli@latest":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@subql/cli/-/cli-1.12.0.tgz#174298caa4d55370e4d500c3f92b9912d8939431"
+  integrity sha512-hBG2q7+cxn8Zp5W5sItnkrqwRp7dmHJ8bAXOI44lATlunp/hw/itWtvcwllZGOpnYBrhKnvSJyXoS/4Y5p87vw==
   dependencies:
     "@oclif/command" "^1.8.16"
     "@oclif/config" "^1.18.3"
     "@oclif/core" "^1.3.3"
     "@oclif/plugin-help" "^3.2.3"
-    "@subql/common" "1.6.0"
+    "@subql/common" "1.7.0"
     "@subql/common-algorand" latest
     "@subql/common-avalanche" latest
     "@subql/common-cosmos" latest
@@ -1369,8 +1369,9 @@
     "@subql/common-near" latest
     "@subql/common-substrate" "1.4.0"
     "@subql/common-terra" latest
-    "@subql/utils" "1.4.0"
+    "@subql/utils" "1.4.1"
     "@subql/validator" "1.8.0"
+    "@typechain/ethers-v5" "10.2.0"
     "@types/ejs" "^3.1.0"
     "@types/inquirer" "^8.2.0"
     algosdk "^1.19.0"
@@ -1385,6 +1386,7 @@
     simple-git "^3.12.0"
     ts-loader "^9.2.6"
     tslib "^2.3.1"
+    typechain "8.1.1"
     webpack "^5.68.0"
     webpack-merge "^5.8.0"
     websocket "^1.0.34"
@@ -1539,6 +1541,20 @@
     reflect-metadata "^0.1.13"
     semver "^7.3.5"
 
+"@subql/common@1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@subql/common/-/common-1.7.0.tgz#580df9e9a15ba4f5a250541c7cd0be260b9e2d13"
+  integrity sha512-SRYvxauobcxbPmtwEVV6l+durYA02V5i23Wg2MPo6bfCnOODtXRbuWvW8qAzEuvgfoF52MudLfgnx3wQRtcfUg==
+  dependencies:
+    axios "^0.27.2"
+    class-transformer "0.5.1"
+    class-validator "^0.13.2"
+    fs-extra "^10.1.0"
+    ipfs-http-client "^52.0.3"
+    js-yaml "^4.1.0"
+    reflect-metadata "^0.1.13"
+    semver "^7.3.5"
+
 "@subql/types-algorand@1.5.0":
   version "1.5.0"
   resolved "https://registry.npmjs.org/@subql/types-algorand/-/types-algorand-1.5.0.tgz"
@@ -1592,10 +1608,10 @@
   resolved "https://registry.npmjs.org/@subql/types/-/types-1.7.0.tgz"
   integrity sha512-K9BFBa/X1oa1Ycv6eU1XCsByFGIlMKig1XF6n1jc30+cgcYIH7Z6O5vkwn3ivLQ1oHlnnYaRLrYn2YXUT7T2Vw==
 
-"@subql/utils@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.npmjs.org/@subql/utils/-/utils-1.4.0.tgz"
-  integrity sha512-QlrYxNO1hQfRPASUVGD9W4D7eKnSKVzUhQsypu9538W/yTc/F6li/Hqqp3ovZY4CZ9X/90/pZUnj7xt27h5edw==
+"@subql/utils@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@subql/utils/-/utils-1.4.1.tgz#ea2528797a3f44e5e7ce178c0e538b760adb6f8b"
+  integrity sha512-uQQclvQv6An0xrQcA9U7yqpQMltoPp57jrqmY4+qrwQFQ9W1jd2F33jIvTlGmryNsKRvlGF6v42lirP9OyuIZA==
   dependencies:
     "@polkadot/util" "^10.2.3"
     "@polkadot/util-crypto" "^10.2.3"
@@ -1609,7 +1625,7 @@
     pino "^6.13.3"
     rotating-file-stream "^3.0.2"
     semver "^7.3.7"
-    sequelize "6.23.0"
+    sequelize "6.28.0"
     tar "^6.1.11"
 
 "@subql/validator@1.8.0":
@@ -1644,9 +1660,9 @@
   resolved "https://registry.npmjs.org/@tootallnate/once/-/once-2.0.0.tgz"
   integrity sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==
 
-"@typechain/ethers-v5@^10.2.0":
+"@typechain/ethers-v5@10.2.0", "@typechain/ethers-v5@^10.2.0":
   version "10.2.0"
-  resolved "https://registry.npmjs.org/@typechain/ethers-v5/-/ethers-v5-10.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/@typechain/ethers-v5/-/ethers-v5-10.2.0.tgz#68f5963efb5214cb2d881477228e4b5b315473e1"
   integrity sha512-ikaq0N/w9fABM+G01OFmU3U3dNnyRwEahkdvi9mqy1a3XwKiPZaF/lu54OcNaEWnpvEYyhhS0N7buCtLQqC92w==
   dependencies:
     lodash "^4.17.15"
@@ -5730,11 +5746,6 @@ retimer@^2.0.0:
   resolved "https://registry.npmjs.org/retimer/-/retimer-2.0.0.tgz"
   integrity sha512-KLXY85WkEq2V2bKex/LOO1ViXVn2KGYe4PYysAdYdjmraYIUsVkXu8O4am+8+5UbaaGl1qho4aqAAPHNQ4GSbg==
 
-retry-as-promised@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.npmjs.org/retry-as-promised/-/retry-as-promised-6.1.0.tgz"
-  integrity sha512-Hj/jY+wFC+SB9SDlIIFWiGOHnNG0swYbGYsOj2BJ8u2HKUaobNKab0OIC0zOLYzDy0mb7A4xA5BMo4LMz5YtEA==
-
 retry-as-promised@^7.0.3:
   version "7.0.4"
   resolved "https://registry.npmjs.org/retry-as-promised/-/retry-as-promised-7.0.4.tgz"
@@ -5856,10 +5867,10 @@ sequelize-pool@^7.1.0:
   resolved "https://registry.npmjs.org/sequelize-pool/-/sequelize-pool-7.1.0.tgz"
   integrity sha512-G9c0qlIWQSK29pR/5U2JF5dDQeqqHRragoyahj/Nx4KOOQ3CPPfzxnfqFPCSB7x5UgjOgnZ61nSxz+fjDpRlJg==
 
-sequelize@6.23.0:
-  version "6.23.0"
-  resolved "https://registry.npmjs.org/sequelize/-/sequelize-6.23.0.tgz"
-  integrity sha512-3tDzy43ip41cQ3oKkvv8ZxoDm1ecCVLrLhcq6J/CBuflUdTe4Xmt6NqA1ZrzzdSDhqVlWn8SxkNIxXSjOn6qLQ==
+sequelize@6.28.0:
+  version "6.28.0"
+  resolved "https://registry.yarnpkg.com/sequelize/-/sequelize-6.28.0.tgz#d6bc4e36647e8501635467c0777c45a33f5d5ba8"
+  integrity sha512-+WHqvUQgTp19GLkt+gyQ+F6qg+FIEO2O5F9C0TOYV/PjZ2a/XwWvVkL1NCkS4VSIjVVvAUutiW6Wv9ofveGaVw==
   dependencies:
     "@types/debug" "^4.1.7"
     "@types/validator" "^13.7.1"
@@ -5870,7 +5881,7 @@ sequelize@6.23.0:
     moment "^2.29.1"
     moment-timezone "^0.5.34"
     pg-connection-string "^2.5.0"
-    retry-as-promised "^6.1.0"
+    retry-as-promised "^7.0.3"
     semver "^7.3.5"
     sequelize-pool "^7.1.0"
     toposort-class "^1.0.1"
@@ -6478,9 +6489,9 @@ type@^2.7.2:
   resolved "https://registry.npmjs.org/type/-/type-2.7.2.tgz"
   integrity sha512-dzlvlNlt6AXU7EBSfpAscydQ7gXB+pPGsPnfJnZpiNJBDj7IaJzQlBZYGdEi4R9HmPdBv2XmWJ6YUtoTa7lmCw==
 
-typechain@^8.1.1:
+typechain@8.1.1, typechain@^8.1.1:
   version "8.1.1"
-  resolved "https://registry.npmjs.org/typechain/-/typechain-8.1.1.tgz"
+  resolved "https://registry.yarnpkg.com/typechain/-/typechain-8.1.1.tgz#9c2e8012c2c4c586536fc18402dcd7034c4ff0bd"
   integrity sha512-uF/sUvnXTOVF2FHKhQYnxHk4su4JjZR8vr4mA2mBaRwHTbwh0jIlqARz9XJr1tA0l7afJGvEa1dTSi4zt039LQ==
   dependencies:
     "@types/prettier" "^2.1.1"
